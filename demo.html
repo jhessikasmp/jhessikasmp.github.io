@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Demo</title>
+    <link rel="stylesheet" href="css/globals.css">
+    <link rel="stylesheet" href="css/styleguide.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="js/menu.js" defer></script>
+    <script src="js/translation.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <!-- Menu de navegação -->
+      <header id="header" class="site-header">
+        <div class="header-container">
+          <a href="#" class="logo">
+            <span class="logo-js">JS</span><span class="logo-dev">Dev</span><span class="logo-dot">.</span>
+          </a>
+          <nav class="main-nav">
+            <ul>
+              <li><a href="index.html#hero" data-i18n="home">Home</a></li>
+              <li><a href="index.html#about" data-i18n="about">About</a></li>
+              <li><a href="index.html#projects" data-i18n="projects">Projects</a></li>
+              <li><a href="index.html#contact" data-i18n="contact">Contact</a></li>
+            </ul>
+          </nav>
+          <div class="header-icons">
+            <a href="https://github.com/jhessikasmp" class="icon-link">
+              <div class="icon-wrapper">
+                <img src="img/Ellipse manu.png" alt="GitHub Icon Background" class="icon-bg">
+                <img src="img/icons github 2.png" alt="GitHub Icon" class="icon-fg">
+              </div>
+            </a>
+            <a href="#" class="icon-link" onclick="toggleLanguage()">
+              <div class="icon-wrapper">
+                <img src="img/Ellipse manu.png" alt="Language Icon Background" class="icon-bg">
+                <img src="img/language.png" alt="Language Icon" class="icon-fg">
+              </div>
+            </a>
+            <button class="hamburger" aria-label="Toggle menu" onclick="toggleMenu()">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <!-- Conteúdo dinâmico do projeto -->
+      <section class="demo-section">
+        <div class="demo-container">
+          <div id="demo-content">
+            <!-- Content will be injected by JS -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Rodapé -->
+      <footer id="footer" class="site-footer">
+        <div class="container footer-container">
+          <div class="footer-logo">JSDEV</div>
+          <p class="footer-credits" data-i18n="footerCredits">
+            Designed & built by <span class="text-white">JSDev</span> with <span class="text-white">accuracy</span>
+          </p>
+          <div class="footer-socials">
+            <a href="https://github.com/jhessikasmp" class="social-icon-link">
+              <div class="footer-icon-wrapper">
+                <img src="img/Ellipse icon footer.png" alt="GitHub Icon Background" class="icon-bg">
+                <img src="img/github.png" alt="GitHub Icon" class="icon-fg">
+              </div>
+            </a>
+            <a href="mailto:jhessika.smp@gmail.com" class="social-icon-link">
+              <div class="footer-icon-wrapper">
+                <img src="img//Ellipse icon footer.png" alt="Email Icon Background" class="icon-bg">
+                <img src="img/mail.png" alt="Email Icon" class="icon-fg">
+              </div>
+            </a>
+            <a href="https://www.linkedin.com/in/jhessika-smp/" class="social-icon-link">
+              <div class="footer-icon-wrapper">
+                <img src="img/Ellipse icon footer.png" alt="LinkedIn Icon Background" class="icon-bg">
+                <img src="img/linkedin.png" alt="LinkedIn Icon" class="icon-fg">
+              </div>
+            </a>
+          </div>
+        </div>
+      </footer>
+    </main>
+    <script>
+      // Project data with translations
+      const projects = [
+        {
+          id: '1',
+          title: {
+            en: 'Restaurant Reservation API',
+            pt: 'API de Reservas para Restaurantes',
+            it: 'API Prenotazioni Ristorante'
+          },
+          desc: {
+            en: 'This project is a digital tool that helps restaurants organize their reservations in a simple and automatic way. With it, customers can book a table by entering their name, date, time, and number of people, all online, without having to call or wait. The system shows all reservations made, allows you to change the number of people or cancel if needed. Each reservation gets a unique code to make control easier. The restaurant can track all reservations in real time, making service faster and more efficient. It is ideal for small businesses that want to modernize the reservation process and avoid confusion with times or occupied tables.',
+            pt: 'Este projeto é uma ferramenta digital que ajuda restaurantes a organizar reservas de forma simples e automática. Com ele, o cliente pode reservar uma mesa informando nome, data, horário e número de pessoas, tudo pela internet, sem precisar ligar ou esperar. O sistema mostra todas as reservas feitas, permite alterar o número de pessoas ou cancelar se necessário. Cada reserva recebe um código único para facilitar o controle. O restaurante acompanha tudo em tempo real, tornando o atendimento mais rápido e eficiente. Ideal para pequenos negócios que querem modernizar o processo de reservas e evitar confusões com horários ou mesas ocupadas.',
+            it: 'Questo progetto è uno strumento digitale che aiuta i ristoranti a gestire le prenotazioni in modo semplice e automatico. I clienti possono prenotare un tavolo inserendo nome, data, ora e numero di persone, tutto online, senza dover chiamare o aspettare. Il sistema mostra tutte le prenotazioni, permette di modificare il numero di persone o cancellare se necessario. Ogni prenotazione riceve un codice unico per facilitare il controllo. Il ristorante può monitorare tutto in tempo reale, rendendo il servizio più veloce ed efficiente. Ideale per piccole attività che vogliono modernizzare il processo di prenotazione ed evitare confusione con orari o tavoli occupati.'
+          },
+          demoUrl: 'https://github.com/jhessikasmp/reservation-api'
+        },
+        {
+          id: '2',
+          title: {
+            en: 'Inventory Management API',
+            pt: 'API de Gestão de Estoque',
+            it: 'API Gestione Magazzino'
+          },
+          desc: {
+            en: 'This project is a simple and efficient system for managing product inventory, designed for small businesses. With it, you can add, view, update, and delete products, as well as register sales that automatically adjust stock levels. The API also generates weekly PDF reports to help track inventory and sales. All features are accessible online, making it easy to keep your stock organized and up to date. The system is built with modern technologies and includes interactive documentation, so you can test and understand how everything works, even if you are not a programmer.',
+            pt: 'Este projeto é um sistema simples e eficiente para gerenciar o estoque de produtos, pensado para pequenos negócios. Com ele, você pode adicionar, visualizar, atualizar e excluir produtos, além de registrar vendas que ajustam o estoque automaticamente. A API também gera relatórios semanais em PDF para acompanhar o estoque e as vendas. Tudo pode ser acessado online, facilitando a organização e atualização do estoque. O sistema usa tecnologias modernas e tem documentação interativa, para que qualquer pessoa possa testar e entender como funciona, mesmo sem ser programador.',
+            it: 'Questo progetto è un sistema semplice ed efficiente per gestire l’inventario dei prodotti, pensato per piccole imprese. Permette di aggiungere, visualizzare, aggiornare ed eliminare prodotti, oltre a registrare le vendite che regolano automaticamente le scorte. L’API genera anche report settimanali in PDF per monitorare inventario e vendite. Tutte le funzioni sono accessibili online, facilitando l’organizzazione e l’aggiornamento delle scorte. Il sistema è costruito con tecnologie moderne e include documentazione interattiva, così chiunque può testare e capire come funziona, anche senza essere programmatore.'
+          },
+          demoUrl: 'https://github.com/jhessikasmp/inventory-management-api'
+        },
+        {
+          id: '3',
+          title: {
+            en: 'Invoice API',
+            pt: 'API de Faturas',
+            it: 'API Fatture'
+          },
+          desc: {
+            en: 'Invoice API is a smart and practical solution for anyone who needs to create and send invoices easily. With this system, you can register your customers and products, generate invoices with all calculations done automatically (including taxes), and send them as professional PDFs directly by email. You can also keep a complete history of all invoices and clients, making it simple to organize your business. The interface is designed to be intuitive, so even those with no technical experience can use it without difficulty. It is perfect for freelancers, small businesses, and anyone who wants to save time and avoid mistakes in billing.',
+            pt: 'A Invoice API é uma solução prática e inteligente para quem precisa criar e enviar faturas de forma fácil. Com este sistema, você cadastra seus clientes e produtos, gera faturas com todos os cálculos automáticos (inclusive impostos) e envia tudo como PDF profissional direto por e-mail. Também é possível manter o histórico completo de todas as faturas e clientes, facilitando a organização do seu negócio. A interface foi pensada para ser intuitiva, então mesmo quem não tem experiência técnica consegue usar sem dificuldade. É perfeita para autônomos, pequenas empresas e qualquer pessoa que queira economizar tempo e evitar erros na cobrança.',
+            it: 'La Invoice API è una soluzione pratica e intelligente per chi deve creare e inviare fatture in modo semplice. Con questo sistema puoi registrare clienti e prodotti, generare fatture con tutti i calcoli automatici (incluso le tasse) e inviarle come PDF professionali direttamente via email. Puoi anche mantenere uno storico completo di tutte le fatture e dei clienti, semplificando l’organizzazione della tua attività. L’interfaccia è intuitiva, quindi anche chi non ha esperienza tecnica può usarla senza difficoltà. È perfetta per liberi professionisti, piccole imprese e chiunque voglia risparmiare tempo ed evitare errori nella fatturazione.'
+          },
+          demoUrl: 'https://github.com/jhessikasmp/invoice-api'
+        },
+        {
+          id: '4',
+          title: {
+            en: 'Employment Agency API',
+            pt: 'API para Agência de Empregos',
+            it: 'API Agenzia per il Lavoro'
+          },
+          desc: {
+            en: 'This project is a management system for employment agencies, designed to help organize job offers, companies, and candidates. The API allows you to create and manage job postings, register companies and candidates, and automatically match candidates to suitable jobs. It also sends email notifications and provides interactive documentation. The system is ideal for agencies that want to digitalize their recruitment process and make it easier to find the right candidate for each job.',
+            pt: 'Este projeto é um sistema de gestão para agências de emprego, feito para organizar vagas, empresas e candidatos. A API permite criar e gerenciar anúncios de vagas, cadastrar empresas e candidatos, e fazer a correspondência automática entre candidatos e vagas ideais. Também envia notificações por e-mail e oferece documentação interativa. O sistema é ideal para agências que querem digitalizar o processo de recrutamento e facilitar a busca pelo candidato certo para cada vaga.',
+            it: 'Questo progetto è un sistema di gestione per agenzie del lavoro, pensato per organizzare offerte di lavoro, aziende e candidati. L’API permette di creare e gestire annunci di lavoro, registrare aziende e candidati, e abbinare automaticamente i candidati alle offerte più adatte. Invia anche notifiche via email e offre documentazione interattiva. Il sistema è ideale per agenzie che vogliono digitalizzare il processo di selezione e facilitare la ricerca del candidato giusto per ogni posizione.'
+          },
+          demoUrl: 'https://github.com/jhessikasmp/employment-agency-api'
+        }
+        // Adicione mais projetos conforme necessário
+      ];
+
+      // Get project id from URL
+      function getProjectId() {
+        const params = new URLSearchParams(window.location.search);
+        return params.get('id');
+      }
+
+      function getCurrentLanguage() {
+        return localStorage.getItem('language') || 'en';
+      }
+
+      function renderDemo() {
+        const id = getProjectId();
+        const project = projects.find(p => p.id === id);
+        const container = document.getElementById('demo-content');
+        const lang = getCurrentLanguage();
+        if (!project) {
+          container.innerHTML = '<h2>Projeto não encontrado</h2><p>Verifique o link ou selecione um projeto válido.</p>';
+          return;
+        }
+        container.innerHTML = `
+          <h1 class="demo-title">${project.title[lang] || project.title.en}</h1>
+          <p class="demo-desc">${project.desc[lang] || project.desc.en}</p>
+          <div style="display: flex; justify-content: center; margin-top: 2rem;">
+            <a href="${project.demoUrl}" class="demo-btn" target="_blank">${lang === 'pt' ? 'Acessar Demo' : lang === 'it' ? 'Vai alla Demo' : 'Go to Demo'}</a>
+          </div>
+        `;
+      }
+
+      // Atualiza demo ao trocar idioma
+      window.addEventListener('storage', function(e) {
+        if (e.key === 'language') {
+          renderDemo();
+        }
+      });
+
+      // Atualiza demo ao trocar idioma pelo botão
+      document.addEventListener('DOMContentLoaded', function() {
+        renderDemo();
+        // Se o botão de linguagem for clicado, re-renderiza
+        const langBtn = document.querySelector('.icon-link[onclick*="toggleLanguage"]');
+        if (langBtn) {
+          langBtn.addEventListener('click', function() {
+            setTimeout(renderDemo, 100); // espera localStorage atualizar
+          });
+        }
+      });
+    </script>
+  </body>
+  </html>
+          </a>
+        </div>
+      </div>
+    </footer>
+  </main>
+</body>
+</html>

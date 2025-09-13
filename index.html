@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <meta
+      name="description"
+      content="Jhessika Sampaio - Full Stack Developer turning ideas into scalable solutions with modern web technologies"
+    />
+    <title>JSDev - Jhessika Sampaio | Full Stack Developer</title>
+  <link rel="stylesheet" href="css/globals.css" />
+  <link rel="stylesheet" href="css/styleguide.css" />
+  <link rel="stylesheet" href="css/style.css" />
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <script src="js/menu.js" defer></script>
+  <script src="js/translation.js" defer></script>
+  </head>
+  <body>
+    <main>
+<header id="header" class="site-header">
+  <div class="header-container">
+    <a href="#" class="logo">
+      <span class="logo-js">JS</span><span class="logo-dev">Dev</span><span class="logo-dot">.</span>
+    </a>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="#hero" data-i18n="home">Home</a></li>
+        <li><a href="#about" data-i18n="about">About</a></li>
+        <li><a href="#projects" data-i18n="projects">Projects</a></li>
+        <li><a href="#contact" data-i18n="contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="header-icons">
+      <!--merged image-->
+      <a href="https://github.com/jhessikasmp" class="icon-link">
+        <div class="icon-wrapper">
+          <img src="img/Ellipse manu.png" alt="GitHub Icon Background" class="icon-bg">
+          <img src="img/icons github 2.png" alt="GitHub Icon" class="icon-fg">
+        </div>
+      </a>
+      <!--merged image-->
+      <a href="#" class="icon-link language-toggle" onclick="toggleLanguage()">
+        <div class="icon-wrapper">
+          <img src="img/Ellipse manu.png" alt="Language Icon Background" class="icon-bg">
+          <img src="img/language.png" alt="Language Icon" class="icon-fg language-icon" id="current-lang-icon">
+          <!-- Bandeiras -->
+          <img src="img/brazil-.png" alt="Portuguese" class="flag-icon flag-br" style="display: none;">
+          <img src="img/italy.png" alt="Italian" class="flag-icon flag-it" style="display: none;">
+        </div>
+      </a>
+      <button class="hamburger" aria-label="Toggle menu" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </div>
+</header>
+<section id="hero" class="hero-section">
+  <div class="container hero-container">
+    <div class="hero-content">
+      <h1 class="hero-title" data-i18n="heroTitle">
+        Turning <span class="text-lightweight">full stack</span> ideas into solutions that deliver results
+      </h1>
+      <p class="hero-subtitle" data-i18n="heroSubtitle">
+        Transforming ideas into robust, scalable solutions that deliver real impact. I build modern web applications with clean architecture and reliable performance.
+      </p>
+      <a href="#contact" class="btn hero-btn" data-i18n="contactMe">Contact me</a>
+    </div>
+    <div class="hero-image-area">
+      <!--merged image-->
+      <div class="hero-image-stack">
+        <div class="circle-accent"></div>
+        <div class="circle-primary"></div>
+        <img src="img/IMG_20250528_124855.jpg" alt="Jhessika Sampaio" class="profile-image">
+      </div>
+      <div class="greeting-box">
+        <p data-i18n="greeting"><span class="text-bold-accent">Hello!</span> I'm Jhessika Sampaio</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="about" class="about-section">
+  <div class="container">
+    <div class="about-intro">
+      <div class="about-intro-left">
+        <h2 class="about-title" data-i18n="aboutTitle">About <span class="text-dark">Me</span></h2>
+        <p class="about-text-small" data-i18n="aboutIntro">
+          <span class="text-accent-bold">&lt;p&gt;</span>
+          My path to software development has been shaped by diverse experiences that taught me valuable lessons. Working in luxury industries showed me the importance of attention to detail and meeting high standards.
+          <span class="text-accent-bold">&lt;/p&gt;</span>
+        </p>
+      </div>
+      <div class="about-intro-right">
+        <hr class="divider-line top-divider">
+        <p class="about-text-large" data-i18n="aboutText">
+          I enjoy working across different parts of web development from databases to user interfaces. I like tackling challenges step by step, whether it's figuring out how to connect different systems or making sure everything works smoothly together.
+          My background in technical support and various administrative roles gave me a good foundation for understanding what users actually need and how to translate that into <span class="text-accent-bold">working solutions</span>. <br />I prefer to keep things simple and
+          focus on what really matters.
+        </p>
+        <h3 class="interests-title" data-i18n="interestsTitle">What Interests Me</h3>
+        <p class="about-text-large" data-i18n="interestsText">
+          I'm curious about how Artificial Intelligence might enhance web applications in the future. There's
+          something exciting about the possibility of making technology more
+          <span class="text-accent-bold">helpful and intuitive for people</span>.
+        </p>
+        <hr class="divider-line bottom-divider">
+      </div>
+    </div>
+    <div class="tech-stack">
+      <article class="stack-card">
+        <div class="stack-info">
+          <h3 data-i18n="frontend">Frontend</h3>
+          <p data-i18n="frontendDesc">&lt;p&gt; Frontend is the part of a site people see and use the pages, buttons, and forms built to be clear, fast, and consistent on any device or browser.&lt;/p&gt;</p>
+        </div>
+        <div class="stack-icons">
+          <img src="img/js.png" alt="JavaScript">
+          <img src="img/html.png" alt="HTML">
+          <img src="img/css-3.png" alt="CSS">
+          <img src="img/react.png" alt="React">
+          <img src="img/bootstrap.png" alt="Bootstrap">
+          <img src="img/icons8-nextjs-48.png" alt="Next.js">
+        </div>
+      </article>
+      <article class="stack-card">
+        <div class="stack-info">
+          <h3 data-i18n="backend">Backend</h3>
+          <p data-i18n="backendDesc">({ Backend is the server side that stores data, applies business rules, and powers the features the user sees securely and reliably })</p>
+        </div>
+        <div class="stack-icons">
+          <img src="img/typescript.png" alt="TypeScript">
+          <img src="img/node-js.png" alt="Node.js">
+          <img src="img/icons8-jwt-48.png" alt="JWT">
+          <img src="img/github-sign.png" alt="GitHub">
+          <img src="img/icons8-express-js-50.png" alt="Express.js">
+          <img src="img/icons8-rest-api-50.png" alt="REST API">
+        </div>
+      </article>
+      <article class="stack-card">
+        <div class="stack-info">
+          <h3 data-i18n="databaseOthers">Database & Others</h3>
+          <p data-i18n="databaseDesc">[{ "Databases organize and retrieve data; Adobe products shape the visuals; WP manages content; Docker keeps the whole setup consistent and easy to run anywhere." }]</p>
+        </div>
+        <div class="stack-icons">
+          <img src="img/icons8-postgresql-50.png" alt="PostgreSQL">
+          <img src="img/icons8-mongodb-24.png" alt="MongoDB">
+          <img src="img/icons8-docker-48.png" alt="Docker">
+          <img src="img/icons8-adobe-illustrator-48.png" alt="Adobe Illustrator">
+          <img src="img/icons8-photoshop-48.png" alt="Adobe Photoshop">
+          <img src="img/wordpress.png" alt="WordPress">
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+<section id="projects" class="projects-section">
+  <div class="container">
+    <h2 class="projects-title" data-i18n="projectsTitle">My Projects</h2>
+    <div class="projects-grid">
+      <article class="project-card">
+        <img src="img/unnamed.jpg" alt="Project 1" class="project-image">
+        <div class="project-content">
+          <h3 class="project-title" data-i18n="projectTitle">Project Title</h3>
+          <p class="project-description" data-i18n="projectDesc">A brief description of the project in English, which will access a larger description</p>
+          <a href="demo.html?id=1" class="btn-demo" data-i18n="demoBtn">Access DEMO version</a>
+        </div>
+      </article>
+      <article class="project-card">
+        <img src="img/unnamed.jpg" alt="Project 2" class="project-image">
+        <div class="project-content">
+          <h3 class="project-title" data-i18n="projectTitle">Project Title</h3>
+          <p class="project-description" data-i18n="projectDesc">A brief description of the project in English, which will access a larger description</p>
+          <a href="demo.html?id=2" class="btn-demo" data-i18n="demoBtn">Access DEMO version</a>
+        </div>
+      </article>
+      <article class="project-card">
+        <img src="img/unnamed.jpg" alt="Project 3" class="project-image">
+        <div class="project-content">
+          <h3 class="project-title" data-i18n="projectTitle">Project Title</h3>
+          <p class="project-description" data-i18n="projectDesc">A brief description of the project in English, which will access a larger description</p>
+          <a href="demo.html?id=3" class="btn-demo" data-i18n="demoBtn">Access DEMO version</a>
+        </div>
+      </article>
+      <article class="project-card">
+        <img src="img/unnamed.jpg" alt="Project 4" class="project-image">
+        <div class="project-content">
+          <h3 class="project-title" data-i18n="projectTitle">Project Title</h3>
+          <p class="project-description" data-i18n="projectDesc">A brief description of the project in English, which will access a larger description</p>
+          <a href="demo.html?id=4" class="btn-demo" data-i18n="demoBtn">Access DEMO version</a>
+        </div>
+      </article>
+      <article class="project-card">
+        <img src="img/unnamed.jpg" alt="Project 5" class="project-image">
+        <div class="project-content">
+          <h3 class="project-title" data-i18n="projectTitle">Project Title</h3>
+          <p class="project-description" data-i18n="projectDesc">A brief description of the project in English, which will access a larger description</p>
+          <a href="demo.html?id=5" class="btn-demo" data-i18n="demoBtn">Access DEMO version</a>
+        </div>
+      </article>
+      <article class="project-card">
+        <img src="img/unnamed.jpg" alt="Project 6" class="project-image">
+        <div class="project-content">
+          <h3 class="project-title" data-i18n="projectTitle">Project Title</h3>
+          <p class="project-description" data-i18n="projectDesc">A brief description of the project in English, which will access a larger description</p>
+          <a href="demo.html?id=6" class="btn-demo" data-i18n="demoBtn">Access DEMO version</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+<section id="contact" class="contact-section">
+  <div class="container contact-container">
+    <h2 class="contact-heading" data-i18n="contactHeading">Let's build together</h2>
+    <p class="contact-subheading" data-i18n="contactSubheading">A project on your mind? Let's make it real.</p>
+    <div class="location-info">
+      <img src="img/icons8-gps-50.png" alt="Location icon" class="location-icon">
+      <p class="location-text" data-i18n="locationText">Treviso - VE</p>
+    </div>
+    <div class="contact-buttons">
+      <a href="mailto:jhessika.smp@gmail.com" class="btn-contact">
+        <img src="img/icons8-email-50.png" alt="Email icon">
+        <span data-i18n="getInTouch">Get in Touch</span>
+      </a>
+      <a href="#" class="btn-contact">
+        <img src="img/icon resume contato.png" alt="Resume icon">
+        <span data-i18n="viewResume">View Resume</span>
+      </a>
+    </div>
+  </div>
+</section>
+<footer id="footer" class="site-footer">
+  <div class="container footer-container">
+    <div class="footer-logo">JSDEV</div>
+    <p class="footer-credits" data-i18n="footerCredits">
+      Designed & built by <span class="text-white">JSDev</span> with <span class="text-white">accuracy</span>
+    </p>
+    <div class="footer-socials">
+      <!--merged image-->
+      <a href="https://github.com/jhessikasmp" class="social-icon-link">
+        <div class="footer-icon-wrapper">
+          <img src="img/Ellipse icon footer.png" alt="GitHub Icon Background" class="icon-bg">
+          <img src="img/github.png" alt="GitHub Icon" class="icon-fg">
+        </div>
+      </a>
+      <!--merged image-->
+      <a href="mailto:jhessika.smp@gmail.com" class="social-icon-link">
+        <div class="footer-icon-wrapper">
+          <img src="img//Ellipse icon footer.png" alt="Email Icon Background" class="icon-bg">
+          <img src="img/mail.png" alt="Email Icon" class="icon-fg">
+        </div>
+      </a>
+      <!--merged image-->
+      <a href="https://www.linkedin.com/in/jhessika-smp/" class="social-icon-link">
+        <div class="footer-icon-wrapper">
+          <img src="img/Ellipse icon footer.png" alt="LinkedIn Icon Background" class="icon-bg">
+          <img src="img/linkedin.png" alt="LinkedIn Icon" class="icon-fg">
+        </div>
+      </a>
+    </div>
+  </div>
+</footer>
+    </main>
+  </body>
+</html>
