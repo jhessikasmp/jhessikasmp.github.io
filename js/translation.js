@@ -30,8 +30,22 @@ const translations = {
 
     // Projects
     projectsTitle: "My Projects",
-    projectTitle: "Project Title",
-    projectDesc: "A brief description of the project in English, which will access a larger description",
+    projectTitle: [
+      "Restaurant Reservation API",
+      "Inventory Management API",
+      "Invoice API",
+      "Employment Agency API",
+      "Booking Platform",
+      "JSFianceApp"
+    ],
+    projectDesc: [
+      "This project is a digital tool that helps restaurants organize their reservations in a simple and automatic way. With it, customers can book a table by entering their name, date, time, and number of people, all online, without having to call or wait. The system shows all reservations made, allows you to change the number of people or cancel if needed. Each reservation gets a unique code to make control easier. The restaurant can track all reservations in real time, making service faster and more efficient. It is ideal for small businesses that want to modernize the reservation process and avoid confusion with times or occupied tables.",
+      "This project is a simple and efficient system for managing product inventory, designed for small businesses. With it, you can add, view, update, and delete products, as well as register sales that automatically adjust stock levels. The API also generates weekly PDF reports to help track inventory and sales. All features are accessible online, making it easy to keep your stock organized and up to date. The system is built with modern technologies and includes interactive documentation, so you can test and understand how everything works, even if you are not a programmer.",
+      "Invoice API is a smart and practical solution for anyone who needs to create and send invoices easily. With this system, you can register your customers and products, generate invoices with all calculations done automatically (including taxes), and send them as professional PDFs directly by email. You can also keep a complete history of all invoices and clients, making it simple to organize your business. The interface is designed to be intuitive, so even those with no technical experience can use it without difficulty. It is perfect for freelancers, small businesses, and anyone who wants to save time and avoid mistakes in billing.",
+      "This project is a management system for employment agencies, designed to help organize job offers, companies, and candidates. The API allows you to create and manage job postings, register companies and candidates, and automatically match candidates to suitable jobs. It also sends email notifications and provides interactive documentation. The system is ideal for agencies that want to digitalize their recruitment process and make it easier to find the right candidate for each job.",
+      "Online platform for booking services, appointments, or events with calendar integration.",
+      "Personal finance app to track expenses, set budgets, and visualize financial goals."
+    ],
     demoBtn: "Access DEMO version",
 
     // Contact
