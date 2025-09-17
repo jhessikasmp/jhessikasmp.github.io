@@ -30,23 +30,19 @@ const translations = {
 
     // Projects
     projectsTitle: "My Projects",
-    projectTitle: [
-      "Restaurant Reservation API",
-      "Inventory Management API",
-      "Invoice API",
-      "Employment Agency API",
-      "Booking Platform",
-      "JSFianceApp"
-    ],
-    projectDesc: [
-      "This project is a digital tool that helps restaurants organize their reservations in a simple and automatic way. With it, customers can book a table by entering their name, date, time, and number of people, all online, without having to call or wait. The system shows all reservations made, allows you to change the number of people or cancel if needed. Each reservation gets a unique code to make control easier. The restaurant can track all reservations in real time, making service faster and more efficient. It is ideal for small businesses that want to modernize the reservation process and avoid confusion with times or occupied tables.",
-      "This project is a simple and efficient system for managing product inventory, designed for small businesses. With it, you can add, view, update, and delete products, as well as register sales that automatically adjust stock levels. The API also generates weekly PDF reports to help track inventory and sales. All features are accessible online, making it easy to keep your stock organized and up to date. The system is built with modern technologies and includes interactive documentation, so you can test and understand how everything works, even if you are not a programmer.",
-      "Invoice API is a smart and practical solution for anyone who needs to create and send invoices easily. With this system, you can register your customers and products, generate invoices with all calculations done automatically (including taxes), and send them as professional PDFs directly by email. You can also keep a complete history of all invoices and clients, making it simple to organize your business. The interface is designed to be intuitive, so even those with no technical experience can use it without difficulty. It is perfect for freelancers, small businesses, and anyone who wants to save time and avoid mistakes in billing.",
-      "This project is a management system for employment agencies, designed to help organize job offers, companies, and candidates. The API allows you to create and manage job postings, register companies and candidates, and automatically match candidates to suitable jobs. It also sends email notifications and provides interactive documentation. The system is ideal for agencies that want to digitalize their recruitment process and make it easier to find the right candidate for each job.",
-      "Online platform for booking services, appointments, or events with calendar integration.",
-      "Personal finance app to track expenses, set budgets, and visualize financial goals."
-    ],
-    demoBtn: "Access DEMO version",
+    projectTitle1: "Restaurant Reservation API",
+  projectDesc1: "Digital tool for restaurants to organize reservations online, with real-time control and easy management.",
+    projectTitle2: "Inventory Management API",
+  projectDesc2: "Simple system for managing product inventory, sales, and reports for small businesses.",
+    projectTitle3: "Invoice API",
+  projectDesc3: "Create and send invoices easily, with automatic calculations and PDF generation for small businesses.",
+    projectTitle4: "Employment Agency API",
+  projectDesc4: "API for employment agencies to manage job offers, candidates, and companies with automation.",
+    projectTitle5: "Booking Platform",
+  projectDesc5: "Platform for booking services, appointments, or events with calendar integration.",
+    projectTitle6: "JSFianceApp",
+  projectDesc6: "App to track expenses, set budgets, and visualize financial goals easily.",
+    demoBtn: "DEMO version",
 
     // Contact
     contactHeading: "Let's build together",
@@ -87,10 +83,24 @@ const translations = {
     databaseOthers: "Banco de Dados & Outros",
     databaseDesc: "[{ \"Bancos de dados organizam e recuperam dados; Produtos Adobe moldam os visuais; WP gerencia conteúdo; Docker mantém tudo consistente e fácil de executar em qualquer lugar.\" }]",
 
-    // Projects
-    projectsTitle: "Meus Projetos",
-    projectTitle: "Título do Projeto",
-    projectDesc: "Uma breve descrição do projeto em português, que dará acesso a uma descrição maior",
+  // Projects
+  projectsTitle: "Meus Projetos",
+  // Títulos/descrições específicos por projeto (usados nos cards)
+  projectTitle1: "API de Reservas para Restaurantes",
+  projectDesc1: "Ferramenta digital para organizar reservas online, com controle em tempo real e gestão simples.",
+  projectTitle2: "API de Gestão de Estoque",
+  projectDesc2: "Sistema simples para gerenciar estoque de produtos, vendas e relatórios para pequenos negócios.",
+  projectTitle3: "API de Faturas",
+  projectDesc3: "Crie e envie faturas com facilidade, com cálculos automáticos e geração de PDF para pequenos negócios.",
+  projectTitle4: "API para Agência de Empregos",
+  projectDesc4: "Gerencie vagas, empresas e candidatos com compatibilidade automática e ações rápidas em interface responsiva.",
+  projectTitle5: "Plataforma de Agendamentos",
+  projectDesc5: "Plataforma para agendar serviços, consultas ou eventos com integração de calendário.",
+  projectTitle6: "JSFianceApp",
+  projectDesc6: "App para controlar despesas, definir orçamentos e visualizar metas financeiras com facilidade.",
+  // Chaves genéricas (legado)
+  projectTitle: "Título do Projeto",
+  projectDesc: "Uma breve descrição do projeto em português, que dará acesso a uma descrição maior",
     demoBtn: "Acesse versão DEMO",
 
     // Contact
@@ -132,10 +142,24 @@ const translations = {
     databaseOthers: "Database & Altri",
     databaseDesc: "[{ \"I database organizzano e recuperano dati; I prodotti Adobe modellano i visuali; WP gestisce contenuti; Docker mantiene tutto consistente e facile da eseguire ovunque.\" }]",
 
-    // Projects
-    projectsTitle: "I Miei Progetti",
-    projectTitle: "Titolo del Progetto",
-    projectDesc: "Una breve descrizione del progetto in italiano, che accederà a una descrizione più ampia",
+  // Projects
+  projectsTitle: "I Miei Progetti",
+  // Titoli/descrizioni specifici per progetto (usati nelle card)
+  projectTitle1: "API Prenotazioni Ristorante",
+  projectDesc1: "Strumento digitale per organizzare prenotazioni online, con controllo in tempo reale e gestione semplice.",
+  projectTitle2: "API Gestione Magazzino",
+  projectDesc2: "Sistema semplice per gestire inventario prodotti, vendite e report per piccole imprese.",
+  projectTitle3: "API Fatture",
+  projectDesc3: "Crea e invia fatture facilmente, con calcoli automatici e generazione PDF per piccole imprese.",
+  projectTitle4: "API Agenzia per il Lavoro",
+  projectDesc4: "Gestisci offerte, aziende e candidati con matching automatico e azioni rapide in un’interfaccia responsive.",
+  projectTitle5: "Piattaforma di Prenotazioni",
+  projectDesc5: "Piattaforma per prenotare servizi, appuntamenti o eventi con integrazione calendario.",
+  projectTitle6: "JSFianceApp",
+  projectDesc6: "App per tracciare spese, definire budget e visualizzare obiettivi finanziari facilmente.",
+  // Chiavi generiche (legacy)
+  projectTitle: "Titolo del Progetto",
+  projectDesc: "Una breve descrizione del progetto in italiano, che accederà a una descrizione più ampia",
     demoBtn: "Accedi versione DEMO",
 
     // Contact
@@ -205,15 +229,17 @@ function updateSpecificElements(lang) {
     btn.textContent = translations[lang].demoBtn;
   });
 
-  // Todos os títulos de projeto
-  document.querySelectorAll('.project-title').forEach(title => {
-    title.textContent = translations[lang].projectTitle;
-  });
-
-  // Todas as descrições de projeto
-  document.querySelectorAll('.project-description').forEach(desc => {
-    desc.textContent = translations[lang].projectDesc;
-  });
+  // Títulos e descrições de cada projeto
+  for (let i = 1; i <= 6; i++) {
+    const title = document.querySelector('.project-title[data-i18n="projectTitle' + i + '"]');
+    if (title && translations[lang]['projectTitle' + i]) {
+      title.textContent = translations[lang]['projectTitle' + i];
+    }
+    const desc = document.querySelector('.project-description[data-i18n="projectDesc' + i + '"]');
+    if (desc && translations[lang]['projectDesc' + i]) {
+      desc.textContent = translations[lang]['projectDesc' + i];
+    }
+  }
 
   // Localização
   const locationText = document.querySelector('.location-text');
