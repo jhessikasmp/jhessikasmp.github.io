@@ -15,8 +15,9 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <script src="js/menu.js" defer></script>
-    <script src="js/translation.js" defer></script>
+  <script src="js/menu.js" defer></script>
+  <script src="js/translation.js" defer></script>
+  <script src="js/animations.js" defer></script>
   </head>
   <body>
     <main>
@@ -41,10 +42,26 @@
                 <img src="img/icons github 2.png" alt="GitHub Icon" class="icon-fg">
               </div>
             </a>
-            <a href="#" class="icon-link" onclick="toggleLanguage()">
+            <a href="#" class="icon-link language-toggle" aria-label="Select language" id="lang-toggle" aria-expanded="false">
               <div class="icon-wrapper">
                 <img src="img/Ellipse manu.png" alt="Language Icon Background" class="icon-bg">
-                <img src="img/language.png" alt="Language Icon" class="icon-fg">
+                <img src="img/language.png" alt="Language Icon" class="icon-fg language-icon" id="current-lang-icon">
+                <img src="img/brazil-.png" alt="Português" class="flag-icon flag-br" style="display: none;">
+                <img src="img/italy.png" alt="Italiano" class="flag-icon flag-it" style="display: none;">
+                <div class="lang-menu" role="menu" aria-label="Select language">
+                  <button class="lang-option" data-lang="en" role="menuitem" aria-label="English">
+                    <img src="img/united-states.png" alt="English">
+                    <span>EN</span>
+                  </button>
+                  <button class="lang-option" data-lang="pt" role="menuitem" aria-label="Português">
+                    <img src="img/brazil-.png" alt="Português">
+                    <span>PT</span>
+                  </button>
+                  <button class="lang-option" data-lang="it" role="menuitem" aria-label="Italiano">
+                    <img src="img/italy.png" alt="Italiano">
+                    <span>IT</span>
+                  </button>
+                </div>
               </div>
             </a>
             <button class="hamburger" aria-label="Toggle menu" onclick="toggleMenu()">
@@ -153,7 +170,35 @@
             it: 'Questo progetto è una demo di marketplace del lavoro in cui puoi gestire Aziende, Candidati, Offerte e Candidature tramite un’interfaccia web pulita e facile da usare. Pensalo come un piccolo strumento HR: puoi aggiungere un’azienda, creare un’offerta per quell’azienda, registrare candidati e vedere quali profili corrispondono a un’offerta in base alla professione e agli anni di esperienza. Tutto è organizzato in tabelle e le schermate sono responsive, quindi funziona bene anche su mobile. Il menu in alto consente di passare tra le sezioni e c’è una barra di ricerca per trovare rapidamente ciò che serve.\n\nL’utilizzo è semplice e non richiede conoscenze tecniche. Dal menu scegli una sezione come Aziende o Candidati. Ogni pagina ha un breve form in alto: inserisci le informazioni e clicca sul pulsante per aggiungere (ad esempio, “Aggiungi Azienda” o “Aggiungi Candidato”). I nuovi elementi compaiono subito nella tabella sottostante, dove puoi modificarli o eliminarli in qualsiasi momento. Nella sezione Offerte puoi cliccare su “Trova Candidati” per vedere automaticamente chi si adatta al ruolo e persino cliccare su “Contatta” per inviare un’email di esempio al candidato usando la funzione integrata. Non è richiesta alcuna registrazione o login.\n\nPoiché si tratta di una dimostrazione, il sistema usa un’API temporanea in memoria per i dati lato server, quindi le informazioni possono azzerarsi quando il server va in standby o si riavvia. Questo approccio mantiene la demo sicura e semplice: puoi provarla liberamente senza rischiare dati reali. È un’anteprima ideale di come apparirebbe e funzionerebbe un vero strumento di gestione del lavoro, con navigazione chiara, ricerca rapida, design responsive e azioni immediate per aggiungere, modificare, fare matching e contattare i candidati.'
           },
           demoUrl: 'https://demoapiemployment.vercel.app/'
-        }
+        },
+        {
+          id: '5',
+          title: {
+            en: 'Booking Platform',
+            pt: 'Plataforma de Agendamentos',
+            it: 'Piattaforma di Prenotazioni'
+          },
+          desc: {
+            en: 'Booking Platform Demo is a clear, hands‑on example of how clients can book time with a professional in just a few clicks. You open it in the browser and see a clean list of professionals with their specialty, description, price, and weekly availability. You create a simple account with your email, log in, pick a professional, choose a day and time from the available slots, and confirm. Right after booking, you receive a confirmation email with all the details, plus a calendar file and one‑click links to add the appointment to Google, Outlook, or Yahoo Calendar. In “My Appointments,” you can review upcoming visits, cancel if something changes, and try a payment demo to see how checkout would work (it’s only a simulation—no real charges). The interface uses soft, friendly colors and supports light/dark mode; it adapts well on phones with a simple menu and large, readable actions. Behind the scenes, it uses sample data in memory instead of a real database, so changes are for demonstration only and can reset if the page or server restarts; emails and payments are also demo‑friendly to keep everything safe and easy to try. The goal is to show the everyday booking flow from browsing to confirmation—fast, intuitive, and polished for real users.',
+            pt: 'A Demo da Plataforma de Agendamentos é um exemplo claro e prático de como clientes podem marcar um horário com um profissional em poucos cliques. Ao abrir no navegador, você vê uma lista limpa de profissionais com especialidade, descrição, preço e disponibilidade semanal. Você cria uma conta simples com seu e‑mail, faz login, escolhe um profissional, seleciona um dia e horário entre os disponíveis e confirma. Logo após o agendamento, você recebe um e‑mail de confirmação com todos os detalhes, além de um arquivo de calendário e links de um clique para adicionar o compromisso no Google, Outlook ou Yahoo Calendar. Em “Meus Agendamentos”, você pode revisar as visitas futuras, cancelar caso algo mude e testar um pagamento de demonstração para ver como funcionaria o checkout (é apenas uma simulação — sem cobranças reais). A interface usa cores suaves e amigáveis e oferece modo claro/escuro; adapta‑se bem ao celular com menu simples e ações grandes e legíveis. Por trás, usa dados de exemplo em memória em vez de um banco de dados real, então as alterações servem apenas para demonstração e podem ser resetadas se a página ou o servidor reiniciar; e‑mails e pagamentos também são preparados para demo, mantendo tudo seguro e fácil de testar. O objetivo é mostrar o fluxo diário de agendamentos, da navegação à confirmação — rápido, intuitivo e polido para usuários reais.',
+            it: 'La Demo della Piattaforma di Prenotazioni è un esempio chiaro e pratico di come i clienti possano prenotare un appuntamento con un professionista in pochi clic. Aprendola nel browser, vedi un elenco pulito di professionisti con specializzazione, descrizione, prezzo e disponibilità settimanale. Crea un account semplice con la tua e‑mail, effettui l’accesso, scegli un professionista, selezioni giorno e ora tra gli slot disponibili e confermi. Subito dopo la prenotazione ricevi un’e‑mail di conferma con tutti i dettagli, oltre a un file calendario e link a un clic per aggiungere l’appuntamento a Google, Outlook o Yahoo Calendar. In “I Miei Appuntamenti” puoi rivedere le visite imminenti, annullare se qualcosa cambia e provare una demo di pagamento per vedere come funzionerebbe il checkout (è solo una simulazione — nessun addebito reale). L’interfaccia usa colori soft e supporta la modalità chiara/scura; si adatta bene su smartphone con menu semplice e azioni grandi e leggibili. Dietro le quinte utilizza dati di esempio in memoria invece di un database reale, quindi le modifiche sono solo dimostrative e possono azzerarsi se la pagina o il server si riavviano; anche e‑mail e pagamenti sono in modalità demo per mantenere tutto sicuro e facile da provare. L’obiettivo è mostrare il flusso quotidiano di prenotazione, dalla ricerca alla conferma — veloce, intuitivo e curato per utenti reali.'
+          },
+          demoUrl: 'https://bookingplatform-six.vercel.app/'
+        },
+        {
+          id: '6',
+          title: {
+            en: 'JSFianceApp',
+            pt: 'JSFianceApp',
+            it: 'JSFianceApp'
+          },
+          desc: {
+            en: 'JSFianceApp is a simple personal finance demo to track expenses and budgets without sign-up. Add an expense with category, amount, date, and note; set a monthly budget per category; and see a summary with totals, remaining budget, and charts. You can filter by month or category, edit or delete entries, and export a PDF report. Data lives only in the browser for demonstration and resets on refresh. The UI is clean and mobile-friendly. This demo illustrates common finance features—categorization, budget tracking, and visual feedback—ready to evolve with authentication, recurring expenses, or bank imports.',
+            pt: 'O JSFianceApp é uma demo simples de finanças pessoais para registrar despesas e acompanhar orçamentos sem cadastro. Adicione uma despesa com categoria, valor, data e observação; defina um orçamento mensal por categoria; e veja um resumo com totais, saldo de orçamento e gráficos. Você pode filtrar por mês ou categoria, editar ou excluir lançamentos e exportar um relatório em PDF. Os dados ficam apenas no navegador para demonstração e são apagados ao atualizar a página. A interface é limpa e amigável no celular. Esta demo ilustra recursos comuns de finanças — categorização, acompanhamento de orçamento e feedback visual — pronta para evoluir com autenticação, despesas recorrentes ou importação bancária.',
+            it: 'JSFianceApp è una demo semplice di finanze personali per registrare spese e budget senza registrazione. Aggiungi una spesa con categoria, importo, data e nota; imposta un budget mensile per categoria; e visualizza un riepilogo con totali, budget residuo e grafici. Puoi filtrare per mese o categoria, modificare o eliminare le voci ed esportare un report in PDF. I dati restano solo nel browser per la dimostrazione e si azzerano aggiornando la pagina. L’interfaccia è pulita e adatta al mobile. Questa demo illustra funzionalità tipiche della finanza personale — categorizzazione, monitoraggio del budget e feedback visivo — pronta a evolversi con autenticazione, spese ricorrenti o import di movimenti bancari.'
+          },
+          demoUrl: '#'
+        },
         // Adicione mais projetos conforme necessário
       ];
 
@@ -176,6 +221,11 @@
           container.innerHTML = '<h2>Projeto não encontrado</h2><p>Verifique o link ou selecione um projeto válido.</p>';
           return;
         }
+        // Atualiza o título da página com o projeto atual
+        try {
+          const titleText = project.title[lang] || project.title.en;
+          document.title = `${titleText} — JSDev Demo`;
+        } catch {}
         container.innerHTML = `
           <h1 class="demo-title">${project.title[lang] || project.title.en}</h1>
           <p class="demo-desc">${project.desc[lang] || project.desc.en}</p>
@@ -205,6 +255,7 @@
       });
     </script>
   </body>
+  <button id="backToTop" aria-label="Back to top" title="Back to top">↑</button>
   </html>
           </a>
         </div>

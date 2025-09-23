@@ -298,19 +298,17 @@ function updateLanguageIcon(lang) {
   const currentIcon = document.getElementById('current-lang-icon');
   const flagBr = document.querySelector('.flag-br');
   const flagIt = document.querySelector('.flag-it');
+  if (!currentIcon || !flagBr || !flagIt) return; // hardening
 
-  // Esconde todas as bandeiras e ícone padrão
   currentIcon.style.display = 'none';
   flagBr.style.display = 'none';
   flagIt.style.display = 'none';
 
-  // Mostra a bandeira correspondente ao idioma
   if (lang === 'pt') {
     flagBr.style.display = 'block';
   } else if (lang === 'it') {
     flagIt.style.display = 'block';
   } else {
-    // Inglês - mostra ícone padrão
     currentIcon.style.display = 'block';
   }
 }
@@ -319,4 +317,44 @@ function updateLanguageIcon(lang) {
 document.addEventListener('DOMContentLoaded', () => {
   changeLanguage(currentLanguage);
   updateLanguageIcon(currentLanguage);
+
+  // Language dropdown direct selection (desktop and fallback mobile)
+  document.querySelectorAll('.lang-option').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      const lang = btn.getAttribute('data-lang');
+      if (!lang) return;
+      changeLanguage(lang);
+      updateLanguageIcon(lang);
+      // Close menu on mobile after selection
+      try {
+        const menu = btn.closest('.lang-menu');
+        if (menu) menu.classList.remove('open');
+      } catch {}
+    });
+  });
+
+  // Toggle language menu on click (all viewports), close on outside click
+  try {
+    const toggle = document.getElementById('lang-toggle');
+    const menu = toggle ? toggle.querySelector('.lang-menu') : null;
+    if (toggle && menu) {
+      toggle.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        const open = !menu.classList.contains('open');
+        menu.classList.toggle('open', open);
+        toggle.setAttribute('aria-expanded', String(open));
+      });
+      document.addEventListener('click', (e) => {
+        if (!menu.classList.contains('open')) return;
+        const target = e.target;
+        if (!toggle.contains(target)) {
+          menu.classList.remove('open');
+          toggle.setAttribute('aria-expanded', 'false');
+        }
+      });
+    }
+  } catch {}
 });

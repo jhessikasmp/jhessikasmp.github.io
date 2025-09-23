@@ -15,6 +15,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <script src="js/menu.js" defer></script>
   <script src="js/translation.js" defer></script>
+  <script src="js/animations.js" defer></script>
   </head>
   <body>
     <main>
@@ -40,13 +41,28 @@
         </div>
       </a>
       <!--merged image-->
-      <a href="#" class="icon-link language-toggle" onclick="toggleLanguage()">
+  <a href="#" class="icon-link language-toggle" aria-label="Select language" id="lang-toggle" aria-expanded="false">
         <div class="icon-wrapper">
           <img src="img/Ellipse manu.png" alt="Language Icon Background" class="icon-bg">
           <img src="img/language.png" alt="Language Icon" class="icon-fg language-icon" id="current-lang-icon">
-          <!-- Bandeiras -->
-          <img src="img/brazil-.png" alt="Portuguese" class="flag-icon flag-br" style="display: none;">
-          <img src="img/italy.png" alt="Italian" class="flag-icon flag-it" style="display: none;">
+          <!-- Bandeiras atuais -->
+          <img src="img/brazil-.png" alt="Português" class="flag-icon flag-br" style="display: none;">
+          <img src="img/italy.png" alt="Italiano" class="flag-icon flag-it" style="display: none;">
+          <!-- Menu de idiomas (desktop) -->
+          <div class="lang-menu" role="menu" aria-label="Select language">
+            <button class="lang-option" data-lang="en" role="menuitem" aria-label="English">
+              <img src="img/united-states.png" alt="English">
+              <span>EN</span>
+            </button>
+            <button class="lang-option" data-lang="pt" role="menuitem" aria-label="Português">
+              <img src="img/brazil-.png" alt="Português">
+              <span>PT</span>
+            </button>
+            <button class="lang-option" data-lang="it" role="menuitem" aria-label="Italiano">
+              <img src="img/italy.png" alt="Italiano">
+              <span>IT</span>
+            </button>
+          </div>
         </div>
       </a>
       <button class="hamburger" aria-label="Toggle menu" onclick="toggleMenu()">
@@ -192,7 +208,7 @@
         </div>
       </article>
       <article class="project-card">
-        <img src="img/unnamed.jpg" alt="Project 5" class="project-image">
+        <img src="img/booking.png" alt="Project 5" class="project-image">
         <div class="project-content">
           <h3 class="project-title" data-i18n="projectTitle5">Booking Platform</h3>
             <p class="project-description" data-i18n="projectDesc5">Online platform for booking services, appointments, or events with calendar integration.</p>
@@ -264,4 +280,5 @@
 </footer>
     </main>
   </body>
+  <button id="backToTop" aria-label="Back to top" title="Back to top">↑</button>
 </html>
