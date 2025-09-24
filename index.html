@@ -8,6 +8,61 @@
       content="Jhessika Sampaio - Full Stack Developer turning ideas into scalable solutions with modern web technologies"
     />
     <title>JSDev - Jhessika Sampaio | Full Stack Developer</title>
+    <!-- Performance: Preload critical hero image -->
+    <link rel="preload" as="image" href="img/IMG_20250528_124855.jpg" />
+  <meta name="color-scheme" content="light dark" />
+    <!-- Canonical & Basic SEO -->
+    <link rel="canonical" href="https://jhessikasmp.github.io/" />
+    <meta name="robots" content="index,follow" />
+    <meta name="author" content="Jhessika Sampaio" />
+    <meta name="theme-color" content="#0d0d0f" />
+    <!-- Open Graph -->
+    <meta property="og:site_name" content="JSDev Portfolio" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="JSDev - Full Stack Developer | Portfolio" />
+    <meta property="og:description" content="Full Stack projects: reservations, inventory, invoicing, employment API, booking platform and more. Clean, scalable, multilingual demos." />
+    <meta property="og:url" content="https://jhessikasmp.github.io/" />
+    <meta property="og:image" content="https://jhessikasmp.github.io/img/IMG_20250528_124855.jpg" />
+    <meta property="og:image:alt" content="Portrait of Jhessika Sampaio" />
+    <meta property="og:locale" content="en_US" />
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="JSDev - Full Stack Developer" />
+    <meta name="twitter:description" content="Building APIs & web apps: reservations, inventory, invoices, employment, booking & finance demos." />
+    <meta name="twitter:image" content="https://jhessikasmp.github.io/img/IMG_20250528_124855.jpg" />
+    <!-- Structured Data Person -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Jhessika Sampaio",
+      "url": "https://jhessikasmp.github.io/",
+      "image": "https://jhessikasmp.github.io/img/IMG_20250528_124855.jpg",
+      "jobTitle": "Full Stack Developer",
+      "sameAs": [
+        "https://github.com/jhessikasmp",
+        "https://www.linkedin.com/in/jhessika-smp/"
+      ],
+      "knowsAbout": [
+        "JavaScript", "TypeScript", "Node.js", "React", "APIs", "PostgreSQL", "MongoDB", "Docker"
+      ]
+    }
+    </script>
+    <!-- Structured Data Projects ItemList -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": "Featured Projects",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "url": "https://jhessikasmp.github.io/demo.html?id=1", "name": "Restaurant Reservation API"},
+        {"@type": "ListItem", "position": 2, "url": "https://jhessikasmp.github.io/demo.html?id=2", "name": "Inventory Management API"},
+        {"@type": "ListItem", "position": 3, "url": "https://jhessikasmp.github.io/demo.html?id=3", "name": "Invoice API"},
+        {"@type": "ListItem", "position": 4, "url": "https://jhessikasmp.github.io/demo.html?id=4", "name": "Employment Agency API"},
+        {"@type": "ListItem", "position": 5, "url": "https://jhessikasmp.github.io/demo.html?id=5", "name": "Booking Platform"}
+      ]
+    }
+    </script>
   <link rel="stylesheet" href="css/globals.css?v=20250923" />
   <link rel="stylesheet" href="css/styleguide.css?v=20250923" />
   <link rel="stylesheet" href="css/style.css?v=20250923" />
@@ -16,15 +71,17 @@
   <script src="js/menu.js?v=20250923" defer></script>
   <script src="js/translation.js?v=20250923" defer></script>
   <script src="js/animations.js?v=20250923" defer></script>
+  <script src="js/theme.js?v=20250924" defer></script>
   </head>
   <body>
-    <main>
+    <a href="#hero" class="skip-link">Skip to content</a>
+    <main id="main-content" role="main">
 <header id="header" class="site-header">
   <div class="header-container">
     <a href="#" class="logo">
       <span class="logo-js">JS</span><span class="logo-dev">Dev</span><span class="logo-dot">.</span>
     </a>
-    <nav class="main-nav">
+    <nav class="main-nav" aria-label="Primary">
       <ul>
         <li><a href="#hero" data-i18n="home">Home</a></li>
         <li><a href="#about" data-i18n="about">About</a></li>
@@ -36,30 +93,30 @@
       <!--merged image-->
       <a href="https://github.com/jhessikasmp" class="icon-link">
         <div class="icon-wrapper">
-          <img src="img/Ellipse manu.png" alt="GitHub Icon Background" class="icon-bg">
-          <img src="img/icons github 2.png" alt="GitHub Icon" class="icon-fg">
+          <img src="img/Ellipse manu.png" alt="GitHub Icon Background" class="icon-bg" loading="lazy" decoding="async">
+          <img src="img/icons github 2.png" alt="GitHub Icon" class="icon-fg" loading="lazy" decoding="async">
         </div>
       </a>
       <!--merged image-->
   <a href="#" class="icon-link language-toggle" aria-label="Select language" id="lang-toggle" aria-expanded="false">
         <div class="icon-wrapper">
-          <img src="img/Ellipse manu.png" alt="Language Icon Background" class="icon-bg">
-          <img src="img/language.png" alt="Language Icon" class="icon-fg language-icon" id="current-lang-icon">
+          <img src="img/Ellipse manu.png" alt="Language Icon Background" class="icon-bg" loading="lazy" decoding="async">
+          <img src="img/language.png" alt="Language Icon" class="icon-fg language-icon" id="current-lang-icon" loading="lazy" decoding="async">
           <!-- Bandeiras atuais -->
-          <img src="img/brazil-.png" alt="Português" class="flag-icon flag-br" style="display: none;">
-          <img src="img/italy.png" alt="Italiano" class="flag-icon flag-it" style="display: none;">
+          <img src="img/brazil-.png" alt="Português" class="flag-icon flag-br" style="display: none;" loading="lazy" decoding="async">
+          <img src="img/italy.png" alt="Italiano" class="flag-icon flag-it" style="display: none;" loading="lazy" decoding="async">
           <!-- Menu de idiomas (desktop) -->
           <div class="lang-menu" role="menu" aria-label="Select language">
             <button class="lang-option" data-lang="en" role="menuitem" aria-label="English">
-              <img src="img/united-states.png" alt="English">
+              <img src="img/united-states.png" alt="English" loading="lazy" decoding="async">
               <span>EN</span>
             </button>
             <button class="lang-option" data-lang="pt" role="menuitem" aria-label="Português">
-              <img src="img/brazil-.png" alt="Português">
+              <img src="img/brazil-.png" alt="Português" loading="lazy" decoding="async">
               <span>PT</span>
             </button>
             <button class="lang-option" data-lang="it" role="menuitem" aria-label="Italiano">
-              <img src="img/italy.png" alt="Italiano">
+              <img src="img/italy.png" alt="Italiano" loading="lazy" decoding="async">
               <span>IT</span>
             </button>
           </div>
@@ -70,10 +127,11 @@
         <span></span>
         <span></span>
       </button>
+      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode" aria-pressed="false"><span class="theme-icon" aria-hidden="true">🌙</span></button>
     </div>
   </div>
 </header>
-<section id="hero" class="hero-section">
+<section id="hero" class="hero-section" tabindex="-1">
   <div class="container hero-container">
     <div class="hero-content">
       <h1 class="hero-title" data-i18n="heroTitle">
@@ -89,7 +147,7 @@
       <div class="hero-image-stack">
         <div class="circle-accent"></div>
         <div class="circle-primary"></div>
-        <img src="img/IMG_20250528_124855.jpg" alt="Jhessika Sampaio" class="profile-image">
+  <img src="img/IMG_20250528_124855.jpg" alt="Jhessika Sampaio" class="profile-image" fetchpriority="high">
       </div>
       <div class="greeting-box">
         <p data-i18n="greeting"><span class="text-bold-accent">Hello!</span> I'm Jhessika Sampaio</p>
@@ -97,7 +155,7 @@
     </div>
   </div>
 </section>
-<section id="about" class="about-section">
+<section id="about" class="about-section" tabindex="-1">
   <div class="container">
     <div class="about-intro">
       <div class="about-intro-left">
@@ -131,12 +189,12 @@
           <p data-i18n="frontendDesc">&lt;p&gt; Frontend is the part of a site people see and use the pages, buttons, and forms built to be clear, fast, and consistent on any device or browser.&lt;/p&gt;</p>
         </div>
         <div class="stack-icons">
-          <img src="img/js.png" alt="JavaScript">
-          <img src="img/html.png" alt="HTML">
-          <img src="img/css-3.png" alt="CSS">
-          <img src="img/react.png" alt="React">
-          <img src="img/bootstrap.png" alt="Bootstrap">
-          <img src="img/icons8-nextjs-48.png" alt="Next.js">
+          <img src="img/js.png" alt="JavaScript" loading="lazy" decoding="async">
+          <img src="img/html.png" alt="HTML" loading="lazy" decoding="async">
+          <img src="img/css-3.png" alt="CSS" loading="lazy" decoding="async">
+          <img src="img/react.png" alt="React" loading="lazy" decoding="async">
+          <img src="img/bootstrap.png" alt="Bootstrap" loading="lazy" decoding="async">
+          <img src="img/icons8-nextjs-48.png" alt="Next.js" loading="lazy" decoding="async">
         </div>
       </article>
       <article class="stack-card">
@@ -145,12 +203,12 @@
           <p data-i18n="backendDesc">({ Backend is the server side that stores data, applies business rules, and powers the features the user sees securely and reliably })</p>
         </div>
         <div class="stack-icons">
-          <img src="img/typescript.png" alt="TypeScript">
-          <img src="img/node-js.png" alt="Node.js">
-          <img src="img/icons8-jwt-48.png" alt="JWT">
-          <img src="img/github-sign.png" alt="GitHub">
-          <img src="img/icons8-express-js-50.png" alt="Express.js">
-          <img src="img/icons8-rest-api-50.png" alt="REST API">
+          <img src="img/typescript.png" alt="TypeScript" loading="lazy" decoding="async">
+          <img src="img/node-js.png" alt="Node.js" loading="lazy" decoding="async">
+          <img src="img/icons8-jwt-48.png" alt="JWT" loading="lazy" decoding="async">
+          <img src="img/github-sign.png" alt="GitHub" loading="lazy" decoding="async">
+          <img src="img/icons8-express-js-50.png" alt="Express.js" loading="lazy" decoding="async">
+          <img src="img/icons8-rest-api-50.png" alt="REST API" loading="lazy" decoding="async">
         </div>
       </article>
       <article class="stack-card">
@@ -159,24 +217,24 @@
           <p data-i18n="databaseDesc">[{ "Databases organize and retrieve data; Adobe products shape the visuals; WP manages content; Docker keeps the whole setup consistent and easy to run anywhere." }]</p>
         </div>
         <div class="stack-icons">
-          <img src="img/icons8-postgresql-50.png" alt="PostgreSQL">
-          <img src="img/icons8-mongodb-24.png" alt="MongoDB">
-          <img src="img/icons8-docker-48.png" alt="Docker">
-          <img src="img/icons8-adobe-illustrator-48.png" alt="Adobe Illustrator">
-          <img src="img/icons8-photoshop-48.png" alt="Adobe Photoshop">
-          <img src="img/wordpress.png" alt="WordPress">
+          <img src="img/icons8-postgresql-50.png" alt="PostgreSQL" loading="lazy" decoding="async">
+          <img src="img/icons8-mongodb-24.png" alt="MongoDB" loading="lazy" decoding="async">
+          <img src="img/icons8-docker-48.png" alt="Docker" loading="lazy" decoding="async">
+          <img src="img/icons8-adobe-illustrator-48.png" alt="Adobe Illustrator" loading="lazy" decoding="async">
+          <img src="img/icons8-photoshop-48.png" alt="Adobe Photoshop" loading="lazy" decoding="async">
+          <img src="img/wordpress.png" alt="WordPress" loading="lazy" decoding="async">
         </div>
       </article>
     </div>
   </div>
 </section>
 
-<section id="projects" class="projects-section">
+<section id="projects" class="projects-section" tabindex="-1">
   <div class="container">
     <h2 class="projects-title" data-i18n="projectsTitle">My Projects</h2>
     <div class="projects-grid">
       <article class="project-card">
-        <img src="img/reservation.png" alt="Project 1" class="project-image">
+  <img src="img/reservation.png" alt="Project 1" class="project-image" loading="lazy" decoding="async">
         <div class="project-content">
             <h3 class="project-title" data-i18n="projectTitle1">Restaurant Reservation API</h3>
               <p class="project-description" data-i18n="projectDesc1">This project is a digital tool that helps restaurants organize their reservations in a simple and automatic way. With it, customers can book a table by entering their name, date, time, and number of people, all online, without having to call or wait. The system shows all reservations made, allows you to change the number of people or cancel if needed. Each reservation gets a unique code to make control easier. The restaurant can track all reservations in real time, making service faster and more efficient. It is ideal for small businesses that want to modernize the reservation process and avoid confusion with times or occupied tables.</p>
@@ -184,7 +242,7 @@
         </div>
       </article>
       <article class="project-card">
-        <img src="img/apistock.png" alt="Project 2" class="project-image">
+  <img src="img/apistock.png" alt="Project 2" class="project-image" loading="lazy" decoding="async">
         <div class="project-content">
             <h3 class="project-title" data-i18n="projectTitle2">Inventory Management API</h3>
               <p class="project-description" data-i18n="projectDesc2">This project is a simple and efficient system for managing product inventory, designed for small businesses. With it, you can add, view, update, and delete products, as well as register sales that automatically adjust stock levels. The API also generates weekly PDF reports to help track inventory and sales. All features are accessible online, making it easy to keep your stock organized and up to date. The system is built with modern technologies and includes interactive documentation, so you can test and understand how everything works, even if you are not a programmer.</p>
@@ -192,7 +250,7 @@
         </div>
       </article>
       <article class="project-card">
-        <img src="img/invoice.png" alt="Project 3" class="project-image">
+  <img src="img/invoice.png" alt="Project 3" class="project-image" loading="lazy" decoding="async">
         <div class="project-content">
             <h3 class="project-title" data-i18n="projectTitle3">Invoice API</h3>
               <p class="project-description" data-i18n="projectDesc3">Invoice API is a smart and practical solution for anyone who needs to create and send invoices easily. With this system, you can register your customers and products, generate invoices with all calculations done automatically (including taxes), and send them as professional PDFs directly by email. You can also keep a complete history of all invoices and clients, making it simple to organize your business. The interface is designed to be intuitive, so even those with no technical experience can use it without difficulty. It is perfect for freelancers, small businesses, and anyone who wants to save time and avoid mistakes in billing.</p>
@@ -200,7 +258,7 @@
         </div>
       </article>
       <article class="project-card">
-        <img src="img/apiagenci.png" alt="Project 4" class="project-image">
+  <img src="img/apiagenci.png" alt="Project 4" class="project-image" loading="lazy" decoding="async">
         <div class="project-content">
             <h3 class="project-title" data-i18n="projectTitle4">Employment Agency API</h3>
               <p class="project-description" data-i18n="projectDesc4">This project is a management system for employment agencies, designed to help organize job offers, companies, and candidates. The API allows you to create and manage job postings, register companies and candidates, and automatically match candidates to suitable jobs. It also sends email notifications and provides interactive documentation. The system is ideal for agencies that want to digitalize their recruitment process and make it easier to find the right candidate for each job.</p>
@@ -208,40 +266,40 @@
         </div>
       </article>
       <article class="project-card">
-        <img src="img/booking.png" alt="Project 5" class="project-image">
+  <img src="img/booking.png" alt="Project 5" class="project-image" loading="lazy" decoding="async">
         <div class="project-content">
           <h3 class="project-title" data-i18n="projectTitle5">Booking Platform</h3>
             <p class="project-description" data-i18n="projectDesc5">Online platform for booking services, appointments, or events with calendar integration.</p>
           <a href="demo.html?id=5" class="btn-demo" data-i18n="demoBtn">DEMO version</a>
         </div>
       </article>
-      <article class="project-card">
+      <!-- <article class="project-card">
         <img src="img/unnamed.jpg" alt="Project 6" class="project-image">
         <div class="project-content">
           <h3 class="project-title" data-i18n="projectTitle6">JSFianceApp</h3>
             <p class="project-description" data-i18n="projectDesc6">Personal finance app to track expenses, set budgets, and visualize financial goals.</p>
           <a href="demo.html?id=6" class="btn-demo" data-i18n="demoBtn">DEMO version</a>
         </div>
-      </article>
+      </article> -->
     </div>
   </div>
 </section>
 
-<section id="contact" class="contact-section">
+<section id="contact" class="contact-section" tabindex="-1">
   <div class="container contact-container">
     <h2 class="contact-heading" data-i18n="contactHeading">Let's build together</h2>
     <p class="contact-subheading" data-i18n="contactSubheading">A project on your mind? Let's make it real.</p>
     <div class="location-info">
-      <img src="img/icons8-gps-50.png" alt="Location icon" class="location-icon">
+  <img src="img/icons8-gps-50.png" alt="Location icon" class="location-icon" loading="lazy" decoding="async">
       <p class="location-text" data-i18n="locationText">Treviso - VE</p>
     </div>
     <div class="contact-buttons">
       <a href="mailto:jhessika.smp@gmail.com" class="btn-contact">
-        <img src="img/icons8-email-50.png" alt="Email icon">
+  <img src="img/icons8-email-50.png" alt="Email icon" loading="lazy" decoding="async">
         <span data-i18n="getInTouch">Get in Touch</span>
       </a>
       <a href="/resume.pdf" class="btn-contact">
-        <img src="img/icon resume contato.png" alt="Resume icon">
+  <img src="img/icon resume contato.png" alt="Resume icon" loading="lazy" decoding="async">
         <span data-i18n="viewResume">View Resume</span>
       </a>
     </div>
@@ -250,29 +308,29 @@
 <footer id="footer" class="site-footer">
   <div class="container footer-container">
     <div class="footer-logo">JSDEV</div>
-    <p class="footer-credits" data-i18n="footerCredits">
+  <p class="footer-credits" data-i18n="footerCredits" aria-live="polite">
       Designed & built by <span class="text-white">JSDev</span> with <span class="text-white">accuracy</span>
     </p>
     <div class="footer-socials">
       <!--merged image-->
       <a href="https://github.com/jhessikasmp" class="social-icon-link">
         <div class="footer-icon-wrapper">
-          <img src="img/Ellipse icon footer.png" alt="GitHub Icon Background" class="icon-bg">
-          <img src="img/github.png" alt="GitHub Icon" class="icon-fg">
+          <img src="img/Ellipse icon footer.png" alt="GitHub Icon Background" class="icon-bg" loading="lazy" decoding="async">
+          <img src="img/github.png" alt="GitHub Icon" class="icon-fg" loading="lazy" decoding="async">
         </div>
       </a>
       <!--merged image-->
       <a href="mailto:jhessika.smp@gmail.com" class="social-icon-link">
         <div class="footer-icon-wrapper">
-          <img src="img//Ellipse icon footer.png" alt="Email Icon Background" class="icon-bg">
-          <img src="img/mail.png" alt="Email Icon" class="icon-fg">
+          <img src="img//Ellipse icon footer.png" alt="Email Icon Background" class="icon-bg" loading="lazy" decoding="async">
+          <img src="img/mail.png" alt="Email Icon" class="icon-fg" loading="lazy" decoding="async">
         </div>
       </a>
       <!--merged image-->
       <a href="https://www.linkedin.com/in/jhessika-smp/" class="social-icon-link">
         <div class="footer-icon-wrapper">
-          <img src="img/Ellipse icon footer.png" alt="LinkedIn Icon Background" class="icon-bg">
-          <img src="img/linkedin.png" alt="LinkedIn Icon" class="icon-fg">
+          <img src="img/Ellipse icon footer.png" alt="LinkedIn Icon Background" class="icon-bg" loading="lazy" decoding="async">
+          <img src="img/linkedin.png" alt="LinkedIn Icon" class="icon-fg" loading="lazy" decoding="async">
         </div>
       </a>
     </div>

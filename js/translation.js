@@ -50,6 +50,22 @@ const translations = {
     locationText: "Treviso - VE",
     getInTouch: "Get in Touch",
     viewResume: "View Resume",
+  // Form
+  formTitle: "Send a message",
+  formIntro: "Prefer something structured? Fill the form below and I'll reply soon.",
+  formNameLabel: "Name",
+  formNameHelp: "Your full name or preferred display name.",
+  formEmailLabel: "Email",
+  formEmailHelp: "We'll use this only to reply.",
+  formSubjectLabel: "Subject",
+  formSubjectHelp: "Optional: a short topic for your message.",
+  formMessageLabel: "Message",
+  formMessageHelp: "Describe your idea, goal, or question.",
+  formSubmit: "Send Message",
+  formErrorRequired: "This field is required.",
+  formErrorEmail: "Enter a valid email.",
+  formSuccess: "Message simulated successfully! (No backend yet)",
+  formFail: "Unable to submit now. Try again later.",
 
     // Footer
     footerCredits: "Designed & built by <span class='text-white'>JSDev</span> with <span class='text-white'>accuracy</span>"
@@ -109,6 +125,22 @@ const translations = {
     locationText: "Treviso - VE",
     getInTouch: "Entre em Contato",
     viewResume: "Ver Currículo",
+  // Form
+  formTitle: "Enviar uma mensagem",
+  formIntro: "Prefere algo estruturado? Preencha o formulário abaixo e responderei em breve.",
+  formNameLabel: "Nome",
+  formNameHelp: "Seu nome completo ou como prefere ser chamado.",
+  formEmailLabel: "E-mail",
+  formEmailHelp: "Usaremos apenas para responder.",
+  formSubjectLabel: "Assunto",
+  formSubjectHelp: "Opcional: um tópico curto para sua mensagem.",
+  formMessageLabel: "Mensagem",
+  formMessageHelp: "Descreva sua ideia, objetivo ou dúvida.",
+  formSubmit: "Enviar Mensagem",
+  formErrorRequired: "Este campo é obrigatório.",
+  formErrorEmail: "Informe um e-mail válido.",
+  formSuccess: "Mensagem simulada com sucesso! (Sem backend ainda)",
+  formFail: "Não foi possível enviar agora. Tente mais tarde.",
 
     // Footer
     footerCredits: "Desenvolvido por <span class='text-white'>JSDev</span> com <span class='text-white'>precisão</span>"
@@ -168,6 +200,22 @@ const translations = {
     locationText: "Treviso - VE",
     getInTouch: "Mettiti in Contatto",
     viewResume: "Visualizza Curriculum",
+  // Form
+  formTitle: "Invia un messaggio",
+  formIntro: "Preferisci qualcosa di strutturato? Compila il modulo e risponderò presto.",
+  formNameLabel: "Nome",
+  formNameHelp: "Il tuo nome completo o come preferisci essere chiamato.",
+  formEmailLabel: "Email",
+  formEmailHelp: "Lo useremo solo per rispondere.",
+  formSubjectLabel: "Oggetto",
+  formSubjectHelp: "Opzionale: un breve argomento.",
+  formMessageLabel: "Messaggio",
+  formMessageHelp: "Descrivi l'idea, obiettivo o domanda.",
+  formSubmit: "Invia Messaggio",
+  formErrorRequired: "Campo obbligatorio.",
+  formErrorEmail: "Inserisci un'email valida.",
+  formSuccess: "Messaggio simulato correttamente! (Nessun backend ancora)",
+  formFail: "Impossibile inviare ora. Riprova più tardi.",
 
     // Footer
     footerCredits: "Progettato e costruito da <span class='text-white'>JSDev</span> con <span class='text-white'>precisione</span>"
@@ -197,6 +245,30 @@ function changeLanguage(lang) {
 
   // Atualizar atributo lang do HTML
   document.documentElement.lang = lang;
+
+  // Anunciar mudança de idioma (se existir região live apropriada)
+  try {
+    let announcer = document.getElementById('lang-announcer');
+    if (!announcer) {
+      announcer = document.createElement('div');
+      announcer.id = 'lang-announcer';
+      announcer.setAttribute('aria-live','polite');
+      announcer.setAttribute('role','status');
+      announcer.style.position = 'absolute';
+      announcer.style.width = '1px';
+      announcer.style.height = '1px';
+      announcer.style.overflow = 'hidden';
+      announcer.style.clip = 'rect(1px,1px,1px,1px)';
+      document.body.appendChild(announcer);
+    }
+    const langNames = { en: 'English', pt: 'Português', it: 'Italiano' };
+    announcer.textContent = 'Language changed to ' + (langNames[lang] || lang);
+  } catch {}
+
+  // Dispara evento customizado para páginas que precisam re-renderizar conteúdo dinâmico (ex: demo.html)
+  try {
+    window.dispatchEvent(new CustomEvent('language-changed', { detail: { lang } }));
+  } catch {}
 }
 
 // Função para atualizar elementos específicos
@@ -357,4 +429,59 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
   } catch {}
+});
+
+// Form validation & simulation
+document.addEventListener('DOMContentLoaded', () => {
+  const form = document.getElementById('contact-form');
+  if(!form) return;
+  const statusEl = document.getElementById('form-status');
+  const t = () => translations[currentLanguage];
+
+  function showError(input, type) {
+    const msgContainer = form.querySelector(`.error-msg[data-error-for="${input.id}"]`);
+    if(!msgContainer) return;
+    let message = '';
+    if(type === 'required') message = t().formErrorRequired;
+    else if(type === 'email') message = t().formErrorEmail;
+    msgContainer.textContent = message;
+    input.setAttribute('aria-invalid','true');
+  }
+  function clearError(input) {
+    const msgContainer = form.querySelector(`.error-msg[data-error-for="${input.id}"]`);
+    if(msgContainer) msgContainer.textContent = '';
+    input.removeAttribute('aria-invalid');
+  }
+  function validateEmail(val){
+    return /.+@.+\..+/.test(val);
+  }
+  function validate(){
+    let valid = true;
+    const name = form.querySelector('#field-name');
+    const email = form.querySelector('#field-email');
+    const message = form.querySelector('#field-message');
+    [name,email,message].forEach(i => clearError(i));
+    if(!name.value.trim()) { showError(name,'required'); valid = false; }
+    if(!email.value.trim()) { showError(email,'required'); valid = false; }
+    else if(!validateEmail(email.value.trim())) { showError(email,'email'); valid = false; }
+    if(!message.value.trim()) { showError(message,'required'); valid = false; }
+    return valid;
+  }
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    statusEl.textContent = '';
+    if(!validate()) {
+      statusEl.setAttribute('role','alert');
+      statusEl.textContent = t().formFail;
+      return;
+    }
+    // Simulação de envio
+    form.querySelector('#form-submit').disabled = true;
+    setTimeout(() => {
+      statusEl.setAttribute('role','alert');
+      statusEl.textContent = t().formSuccess;
+      form.reset();
+      form.querySelector('#form-submit').disabled = false;
+    }, 800);
+  });
 });

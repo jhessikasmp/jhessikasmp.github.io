@@ -35,26 +35,45 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Scroll spy (only on index where sections exist)
   try {
-    const sectionIds = ['hero', 'about', 'projects', 'contact'];
+  const sectionIds = ['hero', 'about', 'projects', 'contact'];
     const sections = sectionIds
       .map(id => document.getElementById(id))
       .filter(Boolean);
     const navLinks = Array.from(document.querySelectorAll('.main-nav a[href^="#"]'));
     if (sections.length && navLinks.length) {
-      const linkFor = (id) => navLinks.find(a => (a.getAttribute('href') || '').endsWith(`#${id}`));
+  const linkFor = (id) => navLinks.find(a => (a.getAttribute('href') || '').endsWith(`#${id}`));
       const spyObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
           const id = entry.target.getAttribute('id');
           const link = linkFor(id);
           if (!link) return;
           if (entry.isIntersecting) {
-            navLinks.forEach(a => a.classList.remove('is-active'));
+            navLinks.forEach(a => { a.classList.remove('is-active'); a.removeAttribute('aria-current'); });
             link.classList.add('is-active');
+            link.setAttribute('aria-current','true');
           }
         });
       }, { rootMargin: '-20% 0px -70% 0px', threshold: 0.1 });
       sections.forEach(sec => spyObserver.observe(sec));
     }
+  } catch {}
+
+  // Focus management when using hash navigation (keyboard accessibility improvement)
+  try {
+    document.addEventListener('click', (e) => {
+      const target = e.target;
+      if (target.tagName === 'A') {
+        const href = target.getAttribute('href') || '';
+        if (href.startsWith('#')) {
+          const id = href.slice(1);
+          const section = document.getElementById(id);
+          if (section) {
+            // Delay to allow browser scroll then focus
+            setTimeout(() => { section.focus(); }, 60);
+          }
+        }
+      }
+    });
   } catch {}
 
   // Back to top button

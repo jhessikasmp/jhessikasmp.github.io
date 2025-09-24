@@ -1,23 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!DOCTYPE html>
-  <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project Demo</title>
-  <link rel="stylesheet" href="css/globals.css?v=20250923">
-  <link rel="stylesheet" href="css/styleguide.css?v=20250923">
-  <link rel="stylesheet" href="css/style.css?v=20250923">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <script src="js/menu.js?v=20250923" defer></script>
-  <script src="js/translation.js?v=20250923" defer></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project Demo</title>
+  <!-- Basic SEO & Sharing (static fallback; dynamic updated via JS) -->
+  <meta name="description" content="Multilingual project demo page showcasing detailed descriptions of portfolio applications." />
+  <meta name="robots" content="index,follow" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="JSDev Portfolio" />
+  <meta property="og:title" content="Project Demo | JSDev" />
+  <meta property="og:description" content="Explore detailed information about this portfolio project (API, platform or management tool)." />
+  <meta property="og:image" content="https://jhessikasmp.github.io/img/IMG_20250528_124855.jpg" />
+  <meta property="og:image:alt" content="Portrait of Jhessika Sampaio" />
+  <meta property="og:url" content="https://jhessikasmp.github.io/demo.html" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Project Demo | JSDev" />
+  <meta name="twitter:description" content="Detailed multilingual project showcase." />
+  <meta name="twitter:image" content="https://jhessikasmp.github.io/img/IMG_20250528_124855.jpg" />
+  <meta name="color-scheme" content="light dark" />
+    <link rel="stylesheet" href="css/globals.css?v=20250923" />
+    <link rel="stylesheet" href="css/styleguide.css?v=20250923" />
+    <link rel="stylesheet" href="css/style.css?v=20250923" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script src="js/menu.js?v=20250923" defer></script>
+    <script src="js/translation.js?v=20250923" defer></script>
   <script src="js/animations.js?v=20250923" defer></script>
+  <script src="js/theme.js?v=20250924" defer></script>
   </head>
   <body>
     <main>
@@ -38,27 +48,27 @@
           <div class="header-icons">
             <a href="https://github.com/jhessikasmp" class="icon-link">
               <div class="icon-wrapper">
-                <img src="img/Ellipse manu.png" alt="GitHub Icon Background" class="icon-bg">
-                <img src="img/icons github 2.png" alt="GitHub Icon" class="icon-fg">
+                <img src="img/Ellipse manu.png" alt="GitHub Icon Background" class="icon-bg" loading="lazy" decoding="async">
+                <img src="img/icons github 2.png" alt="GitHub Icon" class="icon-fg" loading="lazy" decoding="async">
               </div>
             </a>
             <a href="#" class="icon-link language-toggle" aria-label="Select language" id="lang-toggle" aria-expanded="false">
               <div class="icon-wrapper">
-                <img src="img/Ellipse manu.png" alt="Language Icon Background" class="icon-bg">
-                <img src="img/language.png" alt="Language Icon" class="icon-fg language-icon" id="current-lang-icon">
-                <img src="img/brazil-.png" alt="Português" class="flag-icon flag-br" style="display: none;">
-                <img src="img/italy.png" alt="Italiano" class="flag-icon flag-it" style="display: none;">
+                <img src="img/Ellipse manu.png" alt="Language Icon Background" class="icon-bg" loading="lazy" decoding="async">
+                <img src="img/language.png" alt="Language Icon" class="icon-fg language-icon" id="current-lang-icon" loading="lazy" decoding="async">
+                <img src="img/brazil-.png" alt="Português" class="flag-icon flag-br" style="display: none;" loading="lazy" decoding="async">
+                <img src="img/italy.png" alt="Italiano" class="flag-icon flag-it" style="display: none;" loading="lazy" decoding="async">
                 <div class="lang-menu" role="menu" aria-label="Select language">
                   <button class="lang-option" data-lang="en" role="menuitem" aria-label="English">
-                    <img src="img/united-states.png" alt="English">
+                    <img src="img/united-states.png" alt="English" loading="lazy" decoding="async">
                     <span>EN</span>
                   </button>
                   <button class="lang-option" data-lang="pt" role="menuitem" aria-label="Português">
-                    <img src="img/brazil-.png" alt="Português">
+                    <img src="img/brazil-.png" alt="Português" loading="lazy" decoding="async">
                     <span>PT</span>
                   </button>
                   <button class="lang-option" data-lang="it" role="menuitem" aria-label="Italiano">
-                    <img src="img/italy.png" alt="Italiano">
+                    <img src="img/italy.png" alt="Italiano" loading="lazy" decoding="async">
                     <span>IT</span>
                   </button>
                 </div>
@@ -69,6 +79,7 @@
               <span></span>
               <span></span>
             </button>
+            <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode" aria-pressed="false"><span class="theme-icon" aria-hidden="true">🌙</span></button>
           </div>
         </div>
       </header>
@@ -92,20 +103,20 @@
           <div class="footer-socials">
             <a href="https://github.com/jhessikasmp" class="social-icon-link">
               <div class="footer-icon-wrapper">
-                <img src="img/Ellipse icon footer.png" alt="GitHub Icon Background" class="icon-bg">
-                <img src="img/github.png" alt="GitHub Icon" class="icon-fg">
+                <img src="img/Ellipse icon footer.png" alt="GitHub Icon Background" class="icon-bg" loading="lazy" decoding="async">
+                <img src="img/github.png" alt="GitHub Icon" class="icon-fg" loading="lazy" decoding="async">
               </div>
             </a>
             <a href="mailto:jhessika.smp@gmail.com" class="social-icon-link">
               <div class="footer-icon-wrapper">
-                <img src="img//Ellipse icon footer.png" alt="Email Icon Background" class="icon-bg">
-                <img src="img/mail.png" alt="Email Icon" class="icon-fg">
+                <img src="img//Ellipse icon footer.png" alt="Email Icon Background" class="icon-bg" loading="lazy" decoding="async">
+                <img src="img/mail.png" alt="Email Icon" class="icon-fg" loading="lazy" decoding="async">
               </div>
             </a>
             <a href="https://www.linkedin.com/in/jhessika-smp/" class="social-icon-link">
               <div class="footer-icon-wrapper">
-                <img src="img/Ellipse icon footer.png" alt="LinkedIn Icon Background" class="icon-bg">
-                <img src="img/linkedin.png" alt="LinkedIn Icon" class="icon-fg">
+                <img src="img/Ellipse icon footer.png" alt="LinkedIn Icon Background" class="icon-bg" loading="lazy" decoding="async">
+                <img src="img/linkedin.png" alt="LinkedIn Icon" class="icon-fg" loading="lazy" decoding="async">
               </div>
             </a>
           </div>
@@ -225,6 +236,15 @@
         try {
           const titleText = project.title[lang] || project.title.en;
           document.title = `${titleText} — JSDev Demo`;
+          // Atualiza meta tags dinâmicas
+          const descText = (project.desc[lang] || project.desc.en).split('. ').slice(0,3).join('. ').substring(0,240).trim();
+          updateMetaTag('description', descText);
+          updateMetaProperty('og:title', `${titleText} | JSDev`);
+          updateMetaProperty('og:description', descText);
+          updateMetaProperty('og:url', window.location.href);
+          updateMetaName('twitter:title', `${titleText} | JSDev`);
+          updateMetaName('twitter:description', descText);
+          injectProjectJsonLd(titleText, descText, project.demoUrl);
         } catch {}
         container.innerHTML = `
           <h1 class="demo-title">${project.title[lang] || project.title.en}</h1>
@@ -234,6 +254,57 @@
           </div>
         `;
       }
+      function updateMetaTag(name, content){
+        let tag = document.querySelector(`meta[name="${name}"]`);
+        if(!tag){
+          tag = document.createElement('meta');
+          tag.setAttribute('name', name);
+          document.head.appendChild(tag);
+        }
+        tag.setAttribute('content', content);
+      }
+      function updateMetaProperty(prop, content){
+        let tag = document.querySelector(`meta[property="${prop}"]`);
+        if(!tag){
+          tag = document.createElement('meta');
+          tag.setAttribute('property', prop);
+          document.head.appendChild(tag);
+        }
+        tag.setAttribute('content', content);
+      }
+      function updateMetaName(name, content){
+        let tag = document.querySelector(`meta[name="${name}"]`);
+        if(!tag){
+          tag = document.createElement('meta');
+          tag.setAttribute('name', name);
+          document.head.appendChild(tag);
+        }
+        tag.setAttribute('content', content);
+      }
+      function injectProjectJsonLd(title, description, url){
+        // remove previous
+        const old = document.getElementById('project-jsonld');
+        if(old) old.remove();
+        const script = document.createElement('script');
+        script.type = 'application/ld+json';
+        script.id = 'project-jsonld';
+        const data = {
+          '@context': 'https://schema.org',
+          '@type': 'SoftwareApplication',
+          name: title,
+          description: description,
+          applicationCategory: 'WebApplication',
+          operatingSystem: 'Any',
+          offers: {
+            '@type': 'Offer',
+            price: '0',
+            priceCurrency: 'USD'
+          },
+          url: url
+        };
+        script.textContent = JSON.stringify(data);
+        document.head.appendChild(script);
+      }
 
       // Atualiza demo ao trocar idioma
       window.addEventListener('storage', function(e) {
@@ -242,25 +313,15 @@
         }
       });
 
-      // Atualiza demo ao trocar idioma pelo botão
+      // Atualiza demo ao carregar DOM
       document.addEventListener('DOMContentLoaded', function() {
         renderDemo();
-        // Se o botão de linguagem for clicado, re-renderiza
-        const langBtn = document.querySelector('.icon-link[onclick*="toggleLanguage"]');
-        if (langBtn) {
-          langBtn.addEventListener('click', function() {
-            setTimeout(renderDemo, 100); // espera localStorage atualizar
-          });
-        }
+      });
+      // Re-render ao trocar idioma via evento customizado
+      window.addEventListener('language-changed', function() {
+        renderDemo();
       });
     </script>
-  <button id="backToTop" aria-label="Back to top" title="Back to top">↑</button>
+    <button id="backToTop" aria-label="Back to top" title="Back to top">↑</button>
   </body>
-  </html>
-          </a>
-        </div>
-      </div>
-    </footer>
-  </main>
-</body>
 </html>
