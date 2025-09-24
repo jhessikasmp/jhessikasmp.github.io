@@ -14,14 +14,18 @@
     return getStoredPreference() || (systemPrefersDark() ? 'dark' : 'light');
   }
   function applyTheme(mode){
+    if(!btn) return;
+    const iconSpan = btn.querySelector('.theme-icon');
     if(mode === 'dark') {
       root.setAttribute('data-theme','dark');
-      btn?.setAttribute('aria-pressed','true');
-      if(btn) btn.innerHTML = '<span class="theme-icon" aria-hidden="true">☀️</span>';
+      btn.setAttribute('aria-pressed','true');
+      if(iconSpan) iconSpan.textContent = '☀️';
+      btn.setAttribute('aria-label','Switch to light mode');
     } else {
       root.setAttribute('data-theme','light');
-      btn?.setAttribute('aria-pressed','false');
-      if(btn) btn.innerHTML = '<span class="theme-icon" aria-hidden="true">🌙</span>';
+      btn.setAttribute('aria-pressed','false');
+      if(iconSpan) iconSpan.textContent = '🌙';
+      btn.setAttribute('aria-label','Switch to dark mode');
     }
   }
   function toggleTheme(){
