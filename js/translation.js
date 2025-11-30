@@ -40,8 +40,8 @@ const translations = {
   projectDesc4: "API for employment agencies to manage job offers, candidates, and companies with automation.",
     projectTitle5: "Booking Platform",
   projectDesc5: "Platform for booking services, appointments, or events with calendar integration.",
-    projectTitle6: "JSFianceApp",
-  projectDesc6: "App to track expenses, set budgets, and visualize financial goals easily.",
+    projectTitle6: "ShopMetrics Pro",
+  projectDesc6: "Storefront dashboard demo: browse products, track orders, key metrics and PDF reports, with a mock cart/checkout.",
     demoBtn: "DEMO version",
 
     // Contact
@@ -112,8 +112,8 @@ const translations = {
   projectDesc4: "Gerencie vagas, empresas e candidatos com compatibilidade automática e ações rápidas em interface responsiva.",
   projectTitle5: "Plataforma de Agendamentos",
   projectDesc5: "Plataforma para agendar serviços, consultas ou eventos com integração de calendário.",
-  projectTitle6: "JSFianceApp",
-  projectDesc6: "App para controlar despesas, definir orçamentos e visualizar metas financeiras com facilidade.",
+  projectTitle6: "ShopMetrics Pro",
+  projectDesc6: "Demo de painel de loja: navegar produtos, rastrear pedidos, métricas e relatórios PDF, com carrinho/checkout simulado.",
   // Chaves genéricas (legado)
   projectTitle: "Título do Projeto",
   projectDesc: "Uma breve descrição do projeto em português, que dará acesso a uma descrição maior",
@@ -187,8 +187,8 @@ const translations = {
   projectDesc4: "Gestisci offerte, aziende e candidati con matching automatico e azioni rapide in un’interfaccia responsive.",
   projectTitle5: "Piattaforma di Prenotazioni",
   projectDesc5: "Piattaforma per prenotare servizi, appuntamenti o eventi con integrazione calendario.",
-  projectTitle6: "JSFianceApp",
-  projectDesc6: "App per tracciare spese, definire budget e visualizzare obiettivi finanziari facilmente.",
+  projectTitle6: "ShopMetrics Pro",
+  projectDesc6: "Demo dashboard negozio: sfoglia prodotti, traccia ordini, metriche e PDF, con carrello/checkout simulato.",
   // Chiavi generiche (legacy)
   projectTitle: "Titolo del Progetto",
   projectDesc: "Una breve descrizione del progetto in italiano, che accederà a una descrizione più ampia",
