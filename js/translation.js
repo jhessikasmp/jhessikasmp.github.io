@@ -42,6 +42,8 @@ const translations = {
   projectDesc5: "Platform for booking services, appointments, or events with calendar integration.",
     projectTitle6: "ShopMetrics Pro",
   projectDesc6: "Storefront dashboard demo: browse products, track orders, key metrics and PDF reports, with a mock cart/checkout.",
+    projectTitle8: "Advocacia Moreira - Corporate Website",
+    projectDesc8: "Complete institutional website for law firm with professional design, integrated contact system and detailed practice areas.",
     demoBtn: "DEMO version",
 
     // Contact
@@ -50,6 +52,7 @@ const translations = {
     locationText: "Treviso - VE",
     getInTouch: "Get in Touch",
     viewResume: "View Resume",
+    whatsappContact: "WhatsApp",
   // Form
   formTitle: "Send a message",
   formIntro: "Prefer something structured? Fill the form below and I'll reply soon.",
@@ -114,6 +117,8 @@ const translations = {
   projectDesc5: "Plataforma para agendar serviços, consultas ou eventos com integração de calendário.",
   projectTitle6: "ShopMetrics Pro",
   projectDesc6: "Demo de painel de loja: navegar produtos, rastrear pedidos, métricas e relatórios PDF, com carrinho/checkout simulado.",
+  projectTitle8: "Advocacia Moreira - Website Corporativo",
+  projectDesc8: "Website institucional completo para escritório de advocacia com design profissional, sistema de contato integrado e áreas de atuação detalhadas.",
   // Chaves genéricas (legado)
   projectTitle: "Título do Projeto",
   projectDesc: "Uma breve descrição do projeto em português, que dará acesso a uma descrição maior",
@@ -125,6 +130,7 @@ const translations = {
     locationText: "Treviso - VE",
     getInTouch: "Entre em Contato",
     viewResume: "Ver Currículo",
+    whatsappContact: "WhatsApp",
   // Form
   formTitle: "Enviar uma mensagem",
   formIntro: "Prefere algo estruturado? Preencha o formulário abaixo e responderei em breve.",
@@ -189,6 +195,8 @@ const translations = {
   projectDesc5: "Piattaforma per prenotare servizi, appuntamenti o eventi con integrazione calendario.",
   projectTitle6: "ShopMetrics Pro",
   projectDesc6: "Demo dashboard negozio: sfoglia prodotti, traccia ordini, metriche e PDF, con carrello/checkout simulato.",
+  projectTitle8: "Advocacia Moreira - Sito Web Aziendale",
+  projectDesc8: "Sito web istituzionale completo per studio legale con design professionale, sistema di contatto integrato e aree di pratica dettagliate.",
   // Chiavi generiche (legacy)
   projectTitle: "Titolo del Progetto",
   projectDesc: "Una breve descrizione del progetto in italiano, che accederà a una descrizione più ampia",
@@ -200,6 +208,7 @@ const translations = {
     locationText: "Treviso - VE",
     getInTouch: "Mettiti in Contatto",
     viewResume: "Visualizza Curriculum",
+    whatsappContact: "WhatsApp",
   // Form
   formTitle: "Invia un messaggio",
   formIntro: "Preferisci qualcosa di strutturato? Compila il modulo e risponderò presto.",
