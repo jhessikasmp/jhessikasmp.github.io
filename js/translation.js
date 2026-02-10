@@ -44,6 +44,8 @@ const translations = {
   projectDesc6: "Storefront dashboard demo: browse products, track orders, key metrics and PDF reports, with a mock cart/checkout.",
     projectTitle8: "Advocacia Moreira - Corporate Website",
     projectDesc8: "Complete institutional website for law firm with professional design, integrated contact system and detailed practice areas.",
+    projectTitle9: "Scheduling Website",
+    projectDesc9: "Modern scheduling platform with clean design, intuitive booking system, and responsive layout. Perfect for service-based businesses looking to streamline their appointment management process.",
     demoBtn: "DEMO version",
 
     // Contact
@@ -119,6 +121,8 @@ const translations = {
   projectDesc6: "Demo de painel de loja: navegar produtos, rastrear pedidos, métricas e relatórios PDF, com carrinho/checkout simulado.",
   projectTitle8: "Advocacia Moreira - Website Corporativo",
   projectDesc8: "Website institucional completo para escritório de advocacia com design profissional, sistema de contato integrado e áreas de atuação detalhadas.",
+  projectTitle9: "Website de Agendamento",
+  projectDesc9: "Plataforma moderna de agendamento com design limpo, sistema de reserva intuitivo e layout responsivo. Perfeito para empresas de serviços que buscam otimizar seu processo de gestão de compromissos.",
   // Chaves genéricas (legado)
   projectTitle: "Título do Projeto",
   projectDesc: "Uma breve descrição do projeto em português, que dará acesso a uma descrição maior",
@@ -197,6 +201,8 @@ const translations = {
   projectDesc6: "Demo dashboard negozio: sfoglia prodotti, traccia ordini, metriche e PDF, con carrello/checkout simulato.",
   projectTitle8: "Advocacia Moreira - Sito Web Aziendale",
   projectDesc8: "Sito web istituzionale completo per studio legale con design professionale, sistema di contatto integrato e aree di pratica dettagliate.",
+  projectTitle9: "Sito Web di Prenotazioni",
+  projectDesc9: "Piattaforma moderna di prenotazioni con design pulito, sistema di prenotazione intuitivo e layout responsive. Perfetto per aziende di servizi che cercano di ottimizzare il loro processo di gestione appuntamenti.",
   // Chiavi generiche (legacy)
   projectTitle: "Titolo del Progetto",
   projectDesc: "Una breve descrizione del progetto in italiano, che accederà a una descrizione più ampia",
